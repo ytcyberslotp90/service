@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All-in-one Service | Premium PC Support</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#020617;--surface:#0b1220;--text:#e2e8f0;--dim:#94a3b8;
+  --accent:#2563eb;--border:rgba(255,255,255,0.08)
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Plus Jakarta Sans';background:var(--bg);color:var(--text);overflow-x:hidden}
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-thumb{background:var(--accent);border-radius:10px}
+nav{position:fixed;top:0;width:100%;z-index:1000;display:flex;justify-content:space-between;align-items:center;padding:20px 5%;backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.logo{font-weight:800;font-size:1.6rem}
+.hero{height:120vh;display:flex;align-items:center;justify-content:center;text-align:center;flex-direction:column;padding:0 5%}
+.hero h1{font-size:clamp(3rem,8vw,7rem);line-height:0.9;letter-spacing:-3px}
+.hero p{color:var(--dim);margin:20px 0 40px}
+.btn{background:var(--accent);padding:16px 30px;border-radius:14px;text-decoration:none;color:#fff;font-weight:700;transition:.3s}
+.btn:hover{transform:translateY(-5px)}
+.visit-card{margin:100px auto;width:100%;max-width:1000px;border-radius:24px;overflow:hidden;border:1px solid var(--border)}
+.visit-card img{width:100%;display:block}
+.section{max-width:1200px;margin:auto;padding:100px 5%}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:var(--surface);padding:30px;border-radius:20px;border:1px solid var(--border);transition:.4s}
+.card:hover{transform:translateY(-10px)}
+h2{font-size:2.5rem;margin-bottom:40px}
+.highlight{color:var(--accent);font-weight:800}
+footer{padding:60px;text-align:center;color:var(--dim);border-top:1px solid var(--border)}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="logo">All-in-one Service</div>
+<div style="color:var(--dim)">Free Service Available 😏</div>
+</nav>
+
+<section class="hero">
+<h1>Professional PC Repair<br><span class="highlight">Free of Cost*</span></h1>
+<p>No hidden charges. No complexity. Just reliable system repair and optimization.</p>
+<a href="#services" class="btn">Explore Services</a>
+</section>
+
+<div class="visit-card">
+<img src="vc.jpg" alt="visit card">
+</div>
+
+<section class="section" id="services">
+<h2>Services</h2>
+<div class="grid">
+<div class="card">Advanced PC Diagnostics</div>
+<div class="card">Windows Installation & Optimization</div>
+<div class="card">Malware & Virus Removal</div>
+<div class="card">Hardware Repair & Upgrades</div>
+<div class="card">Performance Tuning</div>
+<div class="card">Data Recovery Assistance</div>
+</div>
+</section>
+
+<section class="section">
+<h2>Pricing Model</h2>
+<div class="grid">
+<div class="card">Service Charge: <b>FREE (No money needed)</b> 💀</div>
+<div class="card">Visiting Charge: 1 Glass Water 💧 & Coke 🥤</div>
+<div class="card">Payment Methods: Biriyani 🍗, Chicken Rice 🍚, Cake 🎂</div>
+</div>
+</section>
+
+<section class="section">
+<h2>Why Choose This Service</h2>
+<div class="grid">
+<div class="card">Real hardware-level troubleshooting</div>
+<div class="card">Minimal downtime approach</div>
+<div class="card">Clean optimized delivery</div>
+<div class="card">Transparent workflow</div>
+</div>
+</section>
+
+<section class="section">
+<h2>Contact</h2>
+<div class="grid">
+<div class="card">Phone: +91 6296 616 489</div>
+<div class="card">Service Area: JK Nagar, Asansol, West Bengal, India, Asia, Earth, Milky Way, Universe</div>
+<div class="card">Availability: On Request</div>
+</div>
+</section>
+
+<footer>
+© 2026 All-in-one Service. Free 😈
+</footer>
+
+<script>
+let scrollTarget = 0;
+window.addEventListener('scroll',()=>{scrollTarget = window.scrollY;});
+function smoothScroll(){
+  let current = window.scrollY;
+  let diff = scrollTarget - current;
+  window.scrollTo(0,current + diff * 0.08);
+  requestAnimationFrame(smoothScroll);
+}
+smoothScroll();
+window.addEventListener('scroll',()=>{
+  const hero = document.querySelector('.hero');
+  hero.style.transform = `translateY(${window.scrollY*0.2}px)`;
+});
+</script>
+
+</body>
+</html>
